@@ -1,0 +1,74 @@
+\hypertarget{system__stm32g0xx_8c}{}\doxysection{DMA\+\_\+\+UART/\+Src/system\+\_\+stm32g0xx.c 文件参考}
+\label{system__stm32g0xx_8c}\index{DMA\_UART/Src/system\_stm32g0xx.c@{DMA\_UART/Src/system\_stm32g0xx.c}}
+
+
+CMSIS Cortex-\/\+M0+ Device Peripheral Access Layer System Source File  
+
+
+{\ttfamily \#include \char`\"{}stm32g0xx.\+h\char`\"{}}\newline
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___s_t_m32_g0xx___system___private___includes_gaeafcff4f57440c60e64812dddd13e7cb}{HSE\+\_\+\+VALUE}}~(8000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group___s_t_m32_g0xx___system___private___includes_gaaa8c76e274d0f6dd2cefb5d0b17fbc37}{HSI\+\_\+\+VALUE}}~(16000000\+UL)
+\item 
+\#define \mbox{\hyperlink{group___s_t_m32_g0xx___system___private___includes_ga4872023e65449c0506aac3ea6bec99e9}{LSI\+\_\+\+VALUE}}~(32000\+UL)
+\item 
+\#define \mbox{\hyperlink{group___s_t_m32_g0xx___system___private___includes_ga7bbb9d19e5189a6ccd0fb6fa6177d20d}{LSE\+\_\+\+VALUE}}~(32768UL)
+\item 
+\#define \mbox{\hyperlink{group___s_t_m32_g0xx___system___private___defines_ga40e1495541cbb4acbe3f1819bd87a9fe}{VECT\+\_\+\+TAB\+\_\+\+OFFSET}}~0x0U
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_t_m32_g0xx___system___private___functions_ga93f514700ccf00d08dbdcff7f1224eb2}{System\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Setup the microcontroller system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_g0xx___system___private___functions_gae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Update System\+Core\+Clock variable according to Clock Register Values. The System\+Core\+Clock variable contains the core clock (HCLK), it can be used by the user application to setup the Sys\+Tick timer or configure other parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t {\bfseries System\+Core\+Clock} = 16000000\+UL
+\item 
+const uint32\+\_\+t {\bfseries AHBPresc\+Table} \mbox{[}16UL\mbox{]} = \{0\+UL, 0\+UL, 0\+UL, 0\+UL, 0\+UL, 0\+UL, 0\+UL, 0\+UL, 1UL, 2UL, 3UL, 4UL, 6UL, 7UL, 8UL, 9UL\}
+\item 
+const uint32\+\_\+t {\bfseries APBPresc\+Table} \mbox{[}8UL\mbox{]} = \{0\+UL, 0\+UL, 0\+UL, 0\+UL, 1UL, 2UL, 3UL, 4UL\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+CMSIS Cortex-\/\+M0+ Device Peripheral Access Layer System Source File 
+
+\begin{DoxyAuthor}{作者}
+MCD Application Team
+\end{DoxyAuthor}
+This file provides two functions and one global variable to be called from user application\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{group___s_t_m32_g0xx___system___private___functions_ga93f514700ccf00d08dbdcff7f1224eb2}{System\+Init()}}\+: This function is called at startup just after reset and before branch to main program. This call is made inside the \char`\"{}startup\+\_\+stm32g0xx.\+s\char`\"{} file.
+\item System\+Core\+Clock variable\+: Contains the core clock (HCLK), it can be used by the user application to setup the Sys\+Tick timer or configure other parameters.
+\item \mbox{\hyperlink{group___s_t_m32_g0xx___system___private___functions_gae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update()}}\+: Updates the variable System\+Core\+Clock and must be called whenever the core clock is changed during program execution.
+\end{DoxyItemize}
+
+After each device reset the HSI (8 MHz then 16 MHz) is used as system clock source. Then \mbox{\hyperlink{group___s_t_m32_g0xx___system___private___functions_ga93f514700ccf00d08dbdcff7f1224eb2}{System\+Init()}} function is called, in \char`\"{}startup\+\_\+stm32g0xx.\+s\char`\"{} file, to configure the system clock before to branch to main program.\hypertarget{system__stm32g0xx_8c_autotoc_md0}{}\doxysubsection{This file configures the system clock as follows\+:}\label{system__stm32g0xx_8c_autotoc_md0}
+\DoxyHorRuler{0}
+ \hypertarget{system__stm32g0xx_8c_autotoc_md1}{}\doxysubsubsection{System Clock source                    $\vert$ HSI}\label{system__stm32g0xx_8c_autotoc_md1}
+\hypertarget{system__stm32g0xx_8c_autotoc_md2}{}\doxysubsubsection{SYSCLK(\+Hz)                             $\vert$ 16000000}\label{system__stm32g0xx_8c_autotoc_md2}
+\hypertarget{system__stm32g0xx_8c_autotoc_md3}{}\doxysubsubsection{HCLK(\+Hz)                               $\vert$ 16000000}\label{system__stm32g0xx_8c_autotoc_md3}
+\hypertarget{system__stm32g0xx_8c_autotoc_md4}{}\doxysubsubsection{AHB Prescaler                          $\vert$ 1}\label{system__stm32g0xx_8c_autotoc_md4}
+\hypertarget{system__stm32g0xx_8c_autotoc_md5}{}\doxysubsubsection{APB Prescaler                          $\vert$ 1}\label{system__stm32g0xx_8c_autotoc_md5}
+\hypertarget{system__stm32g0xx_8c_autotoc_md6}{}\doxysubsubsection{HSI Division factor                    $\vert$ 1}\label{system__stm32g0xx_8c_autotoc_md6}
+\hypertarget{system__stm32g0xx_8c_autotoc_md7}{}\doxysubsubsection{PLL\+\_\+\+M                                  $\vert$ 1}\label{system__stm32g0xx_8c_autotoc_md7}
+\hypertarget{system__stm32g0xx_8c_autotoc_md8}{}\doxysubsubsection{PLL\+\_\+\+N                                  $\vert$ 8}\label{system__stm32g0xx_8c_autotoc_md8}
+\hypertarget{system__stm32g0xx_8c_autotoc_md9}{}\doxysubsubsection{PLL\+\_\+\+P                                  $\vert$ 7}\label{system__stm32g0xx_8c_autotoc_md9}
+\hypertarget{system__stm32g0xx_8c_autotoc_md10}{}\doxysubsubsection{PLL\+\_\+\+Q                                  $\vert$ 2}\label{system__stm32g0xx_8c_autotoc_md10}
+\hypertarget{system__stm32g0xx_8c_autotoc_md11}{}\doxysubsubsection{PLL\+\_\+\+R                                  $\vert$ 2}\label{system__stm32g0xx_8c_autotoc_md11}
+\hypertarget{system__stm32g0xx_8c_autotoc_md12}{}\doxysubsubsection{Require 48\+MHz for RNG                  $\vert$ Disabled}\label{system__stm32g0xx_8c_autotoc_md12}
+=============================================================================
+
+\begin{DoxyAttention}{注意}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2018 STMicroelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 

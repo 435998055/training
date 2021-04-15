@@ -1,0 +1,78 @@
+\hypertarget{stm32g0xx__it_8c}{}\doxysection{DMA\+\_\+\+UART/\+Src/stm32g0xx\+\_\+it.c 文件参考}
+\label{stm32g0xx__it_8c}\index{DMA\_UART/Src/stm32g0xx\_it.c@{DMA\_UART/Src/stm32g0xx\_it.c}}
+
+
+Interrupt Service Routines.  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32g0xx\+\_\+it.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\newline
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stm32g0xx__it_8c_a6ad7a5e3ee69cb6db6a6b9111ba898bc}\label{stm32g0xx__it_8c_a6ad7a5e3ee69cb6db6a6b9111ba898bc}} 
+void \mbox{\hyperlink{stm32g0xx__it_8c_a6ad7a5e3ee69cb6db6a6b9111ba898bc}{NMI\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles Non maskable interrupt. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{stm32g0xx__it_8c_a2bffc10d5bd4106753b7c30e86903bea}\label{stm32g0xx__it_8c_a2bffc10d5bd4106753b7c30e86903bea}} 
+void \mbox{\hyperlink{stm32g0xx__it_8c_a2bffc10d5bd4106753b7c30e86903bea}{Hard\+Fault\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles Hard fault interrupt. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{stm32g0xx__it_8c_a3e5ddb3df0d62f2dc357e64a3f04a6ce}\label{stm32g0xx__it_8c_a3e5ddb3df0d62f2dc357e64a3f04a6ce}} 
+void \mbox{\hyperlink{stm32g0xx__it_8c_a3e5ddb3df0d62f2dc357e64a3f04a6ce}{SVC\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles System service call via SWI instruction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{stm32g0xx__it_8c_a6303e1f258cbdc1f970ce579cc015623}\label{stm32g0xx__it_8c_a6303e1f258cbdc1f970ce579cc015623}} 
+void \mbox{\hyperlink{stm32g0xx__it_8c_a6303e1f258cbdc1f970ce579cc015623}{Pend\+SV\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles Pendable request for system service. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{stm32g0xx__it_8c_ab5e09814056d617c521549e542639b7e}\label{stm32g0xx__it_8c_ab5e09814056d617c521549e542639b7e}} 
+void \mbox{\hyperlink{stm32g0xx__it_8c_ab5e09814056d617c521549e542639b7e}{Sys\+Tick\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles System tick timer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{stm32g0xx__it_8c_a15c08985a173a6dd7e1d0f620697610c}\label{stm32g0xx__it_8c_a15c08985a173a6dd7e1d0f620697610c}} 
+void \mbox{\hyperlink{stm32g0xx__it_8c_a15c08985a173a6dd7e1d0f620697610c}{DMA1\+\_\+\+Ch4\+\_\+7\+\_\+\+DMAMUX1\+\_\+\+OVR\+\_\+\+IRQHandler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles DMA1 channel 4, channel 5, channel 6, channel 7 and DMAMUX1 interrupts. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{stm32g0xx__it_8c_a0ca6fd0e6f77921dd1123539857ba0a8}\label{stm32g0xx__it_8c_a0ca6fd0e6f77921dd1123539857ba0a8}} 
+void \mbox{\hyperlink{stm32g0xx__it_8c_a0ca6fd0e6f77921dd1123539857ba0a8}{USART2\+\_\+\+IRQHandler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles USART2 global interrupt / USART2 wake-\/up interrupt through EXTI line 26. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stm32g0xx__it_8c_aef6205a5e8ccf1c91719b5ac61ca86bf}\label{stm32g0xx__it_8c_aef6205a5e8ccf1c91719b5ac61ca86bf}} 
+uint8\+\_\+t {\bfseries txdata} \mbox{[}20\mbox{]}
+\item 
+\mbox{\Hypertarget{stm32g0xx__it_8c_a011955f192cf72fe9d44369d199c35cf}\label{stm32g0xx__it_8c_a011955f192cf72fe9d44369d199c35cf}} 
+uint8\+\_\+t {\bfseries rxdata} \mbox{[}20\mbox{]}
+\item 
+\mbox{\Hypertarget{stm32g0xx__it_8c_a0083b476c2a75ab9fb2ccbed0048857e}\label{stm32g0xx__it_8c_a0083b476c2a75ab9fb2ccbed0048857e}} 
+DMA\+\_\+\+Handle\+Type\+Def {\bfseries hdma\+\_\+usart2\+\_\+tx}
+\item 
+\mbox{\Hypertarget{stm32g0xx__it_8c_a784aa25dc7e4580cfbf80658340f482c}\label{stm32g0xx__it_8c_a784aa25dc7e4580cfbf80658340f482c}} 
+DMA\+\_\+\+Handle\+Type\+Def {\bfseries hdma\+\_\+usart2\+\_\+rx}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{stm32g0xx__it_8c_aa9479c261d65eecedd3d9582f7f0f89c}{huart2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Interrupt Service Routines. 
+
+\begin{DoxyAttention}{注意}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2021 STMicroelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{stm32g0xx__it_8c_aa9479c261d65eecedd3d9582f7f0f89c}\label{stm32g0xx__it_8c_aa9479c261d65eecedd3d9582f7f0f89c}} 
+\index{stm32g0xx\_it.c@{stm32g0xx\_it.c}!huart2@{huart2}}
+\index{huart2@{huart2}!stm32g0xx\_it.c@{stm32g0xx\_it.c}}
+\doxysubsubsection{\texorpdfstring{huart2}{huart2}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart2\hspace{0.3cm}{\ttfamily [extern]}}
+
+File Name \+: USART.\+c Description \+: This file provides code for the configuration of the USART instances.
+
+\begin{DoxyAttention}{注意}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2021 STMicroelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under BSD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+BSD-\/3-\/\+Clause 
